@@ -79,7 +79,8 @@ function createPageImage(page) {
             nodeHtmlToImage({
                 output: outputImagePath,
                 html: pagehtml,
-                transparent: true
+                transparent: true,
+                puppeteerArgs:'--no-sandbox'
             }).then(() => {
                 var sharpimg = sharp(outputImagePath)
                 if (page.extract) {
