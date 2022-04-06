@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd /home/multi/
+cd /usr/local/
 
-git clone https://github.com/Multie/documentsStorage
+git clone https://github.com/Multie/HtmlRenderServer
 
-cd documentsStorage
-sudo cp ./documentstorage.service /usr/lib/systemd/system/documentsStorage.service
+cd HtmlRenderServer
+sudo cp ./HtmlRenderServer.service /usr/lib/systemd/system/HtmlRenderServer.service
 
 sudo systemctl daemon-reload
-#sudo service documentstorage start
+sudo service HtmlRenderServer start

@@ -1,0 +1,13 @@
+[Unit]
+Description=Html to Image Service
+After=network.target
+
+[Service]
+Environment="MY_HOST=0.0.0.0"
+Environment="MY_PORT=5000"
+Type=simple
+ExecStart=node /usr/local/HtmlRenderServer/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
