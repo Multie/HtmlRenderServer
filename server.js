@@ -80,7 +80,7 @@ function createPageImage(page) {
                 output: outputImagePath,
                 html: pagehtml,
                 transparent: true,
-                puppeteerArgs:'--no-sandbox'
+                puppeteerArgs:{args:["--no-sandbox"]}
             }).then(() => {
                 var sharpimg = sharp(outputImagePath)
                 if (page.extract) {
