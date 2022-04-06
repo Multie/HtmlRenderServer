@@ -73,8 +73,8 @@ function getPage(url) {
 
 function createPageImage(page) {
     return new Promise((resolve, reject) => {
-        var outputImagePath = `images/${page.name}.png`
-        var outputImagePathSized = `images/${page.name}sized.png`
+        var outputImagePath = __dirname +`/images/${page.name}.png`
+        var outputImagePathSized =__dirname + `/images/${page.name}sized.png`
         getPage(page.url).then(pagehtml => {
             nodeHtmlToImage({
                 output: outputImagePath,
