@@ -26,7 +26,7 @@ var app = express()
 
 function getConfig() {
     return new Promise((resolve, reject) => {
-        fs.readFile("config.json", (err, text) => {
+        fs.readFile(__dirname + "/config.json", (err, text) => {
             if (err) {
                 console.trace(err);
                 reject(err);
@@ -152,7 +152,6 @@ getConfig().then((config) => {
             res.status(400).send("no Content");
             return;
         }
-        console.log( __dirname + "config.json")
         res.sendFile( __dirname + "/config.json");
     })
     app.listen(config.port, () => {
