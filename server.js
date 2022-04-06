@@ -105,6 +105,7 @@ getConfig().then((config) => {
     });
 
     setInterval(()=> {
+        console.log("Update Images")
         config.pages.forEach(page => {
             createPageImage(page).then(() => {
     
