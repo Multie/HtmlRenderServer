@@ -114,7 +114,7 @@ getConfig().then((config) => {
     },config.refreshrate);
 
     app.use(bodyParser.text());
-    app.use(config.webroot, express.static('images'));
+    app.use(config.webroot, express.static(__dirname + '/images'));
 
     app.get('/', function (req, res) {
         res.sendFile( __dirname + "/readme.md");
