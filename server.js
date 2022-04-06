@@ -86,7 +86,6 @@ function createPageImage(page) {
                     sharpimg = sharpimg.extract(page.extract)
                 }
                 if (page.resize) {
-                    console.log(page.resize);
                     sharpimg = sharpimg.resize(page.resize)
                 }
                 sharpimg.toFile(outputImagePathSized).then((info) => {
