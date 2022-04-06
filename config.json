@@ -1,0 +1,18 @@
+{
+    "port":3000,
+    "webroot":"/htmltoimage",
+    "pages":[
+        {
+            "url":"https://www.atomuhr.de/",
+            "name":"page1",
+            "resize":{
+                "height":200,
+                "width":200,
+                "fit":"cover",
+                "position":"top"
+            },
+            "transparent":false
+        }
+    ],
+    "refreshrate":100000
+}
